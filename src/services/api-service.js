@@ -15,8 +15,40 @@ export const fetchTrendingMovies = async () => {
     console.error(error);
   }
 };
-console.log(fetchTrendingMovies());
 
+export const fetchMovieById = async id => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const fetchCast = async id => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`,
+    );
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const fetchReviews = async id => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`,
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+// console.log(fetchMovieById());
 // const fetchMovieBySearch = searchQuery => {
 //   try {
 //     const { data } = await axios.get(

@@ -1,7 +1,8 @@
 import React from 'react';
+import Cast from '../Components/cast/Cast';
 
-const Cast = () => {
-  return <h2>Cast</h2>;
+const CastPage = () => {
+  return <Cast />;
 };
 
-export default Cast;
+export default CastPage;

@@ -10,7 +10,7 @@ const Main = () => {
     <MainContainer>
       <Suspense fallback={<h2>Loading...</h2>}>
         <Switch>
-          <Route exact path="/movies/:id" component={MovieDetailsPage} />
+          <Route path="/movie/:movieId">{MovieDetailsPage}</Route>
           {mainRoutes.map(route => (
             <Route exact={route.exact} path={route.path} component={route.component} />
           ))}

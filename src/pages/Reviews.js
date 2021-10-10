@@ -1,7 +1,8 @@
 import React from 'react';
+import Reviews from '../Components/reviews/Reviews';
 
-const Reviews = () => {
-  return <h2>Reviews</h2>;
+const ReviewsPage = () => {
+  return <Reviews />;
 };
 
-export default Reviews;
+export default ReviewsPage;

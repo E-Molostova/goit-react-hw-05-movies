@@ -1,7 +1,8 @@
 import React from 'react';
+import MovieDetails from '../Components/movieDetails/MovieDetails';
 
 const MovieDetailsPage = () => {
-  return <h2>MovieDetailsPage</h2>;
+  return <MovieDetails />;
 };
 
 export default MovieDetailsPage;
