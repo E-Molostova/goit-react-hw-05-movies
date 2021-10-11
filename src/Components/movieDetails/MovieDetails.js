@@ -16,10 +16,6 @@ const MovieDetails = () => {
     movieAPI.fetchMovieById(movieId).then(setMovie);
   }, [movieId]);
 
-  // console.log(movieId);
-  // console.log(movie); //undefined ??
-  // console.log(setMovie);
-
   const releaseYear = new Date(movie.release_date).getFullYear();
 
   const onGoback = () => {

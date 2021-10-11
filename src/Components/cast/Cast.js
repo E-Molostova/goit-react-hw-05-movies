@@ -3,7 +3,6 @@ import { useParams, useLocation } from 'react-router-dom';
 import * as movieAPI from '../../services/api-service';
 import Actor from '../actor/Actor';
 import { ActorsContainer } from './CastStyled';
-import noPhoto from '../../images/placeholder.png';
 
 const Cast = () => {
   const location = useLocation();
@@ -16,8 +15,6 @@ const Cast = () => {
       .then(setActors)
       .catch(error => console.log(error));
   }, [movieId]);
-
-  //   console.log(actors.cast);
 
   return (
     <ActorsContainer>
