@@ -11,6 +11,7 @@ export const MovieDetailsContainer = styled.div`
   }
 
   .moviePoster {
+    border-radius: 5px;
   }
   .movieTitle {
     margin: 0;
@@ -30,5 +31,16 @@ export const MovieDetailsContainer = styled.div`
   .movieGenres {
     margin-right: 5px;
     font-weight: 400;
+  }
+`;
+
+export const AdditionalContainer = styled.div`
+  .addTitle {
+    margin-left: 20px;
+  }
+
+  .addLink {
+    text-decoration: none;
+    margin-left: 20px;
   }
 `;

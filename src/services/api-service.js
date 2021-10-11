@@ -31,7 +31,7 @@ export const fetchCast = async id => {
     const { data } = await axios.get(
       `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`,
     );
-    return data;
+    return data.cast;
   } catch (error) {
     console.error(error);
   }
@@ -43,22 +43,23 @@ export const fetchReviews = async id => {
       `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`,
     );
 
-    return data;
+    return data.results;
   } catch (error) {
     console.error(error);
   }
 };
 // console.log(fetchMovieById());
-// const fetchMovieBySearch = searchQuery => {
-//   try {
-//     const { data } = await axios.get(
-//       `${}search/movie?api_key=${apiKey}&query=${searchQuery}&page=${currentPage}&language=en-US`,
-//     );
 
-//     const results = data.results;
+export const fetchMovieBySearch = async searchQuery => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${searchQuery}&page=1&language=en-US`,
+    );
 
-//     return results;
-//   } catch (error) {
-//     console.error('Smth wrong with fetch movie search in api', error);
-//   }
-// };
+    const results = data.results;
+
+    return results;
+  } catch (error) {
+    console.error(error);
+  }
+};

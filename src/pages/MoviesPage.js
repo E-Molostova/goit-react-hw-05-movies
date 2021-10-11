@@ -1,7 +1,8 @@
 import React from 'react';
+import MoviesFilter from '../Components/moviesPage/MoviesFilter';
 
 const MoviesPage = () => {
-  return <h2>MoviesPage</h2>;
+  return <MoviesFilter/>;
 };
 
 export default MoviesPage;

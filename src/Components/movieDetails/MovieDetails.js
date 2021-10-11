@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useParams, useRouteMatch } from 'react-router-dom';
+import { NavLink, useParams, useRouteMatch, useHistory, useLocation } from 'react-router-dom';
 import { additionalRoutes } from '../../routes/additionalRoutes';
 import * as movieAPI from '../../services/api-service';
-import Cast from '../cast/Cast';
-import Reviews from '../reviews/Reviews';
-import { MovieDetailsContainer } from './MovieDetailsStyled';
+import GoBackButton from '../goBackButton/GoBackButton';
+import { AdditionalContainer, MovieDetailsContainer } from './MovieDetailsStyled';
 
 const MovieDetails = () => {
   const match = useRouteMatch();
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     movieAPI.fetchMovieById(movieId).then(setMovie);
@@ -21,8 +22,15 @@ const MovieDetails = () => {
 
   const releaseYear = new Date(movie.release_date).getFullYear();
 
+  const onGoback = () => {
+    history.push(location.state.from);
+  };
+
   return (
     <>
+      <div>
+        <GoBackButton onGoBack={onGoback} />
+      </div>
       <MovieDetailsContainer>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
@@ -44,19 +52,19 @@ const MovieDetails = () => {
           </p>
         </div>
       </MovieDetailsContainer>
-      <div>
-        <h3>Additional information</h3>
-
-        {/* <Cast />
-
-        <Reviews /> */}
+      <AdditionalContainer>
+        <h3 className="addTitle">Additional information</h3>
 
         {additionalRoutes.map(route => (
-          <NavLink exact={route.exact} to={`${match.url}${route.path}`}>
+          <NavLink
+            className="addLink"
+            exact={route.exact}
+            to={{ pathname: `${match.url}${route.path}`, state: { from: location.state.from } }}
+          >
             {route.name}
           </NavLink>
         ))}
-      </div>
+      </AdditionalContainer>
     </>
   );
 };
