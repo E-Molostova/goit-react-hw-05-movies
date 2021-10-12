@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { mainRoutes } from '../../routes/mainRoutes';
 import MovieDetailsPage from '../../pages/MovieDetailsPage';
@@ -12,8 +12,15 @@ const Main = () => {
         <Switch>
           <Route path="/movie/:movieId">{MovieDetailsPage}</Route>
           {mainRoutes.map(route => (
-            <Route exact={route.exact} path={route.path} component={route.component} />
+            <Route
+              key={route.path}
+              exact={route.exact}
+              path={route.path}
+              component={route.component}
+            />
           ))}
+          <Route render={() => <h1>Page not found</h1>} path={'/not-found'} />
+          <Redirect to="/" />
         </Switch>
       </Suspense>
     </MainContainer>

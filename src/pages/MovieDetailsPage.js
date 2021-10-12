@@ -14,6 +14,7 @@ const MovieDetailsPage = () => {
       <Route path={'/movie/:movieId/reviews'}>
         <Reviews />
       </Route>
+      
     </>
   );
 };
