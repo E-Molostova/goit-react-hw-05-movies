@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const MovieDetailsContainer = styled.div`
   padding: 20px;
-  display: flex;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   .movieDescr {
     display: flex;
@@ -12,6 +15,7 @@ export const MovieDetailsContainer = styled.div`
 
   .moviePoster {
     border-radius: 5px;
+    width: 300px;
   }
   .movieTitle {
     margin: 0;

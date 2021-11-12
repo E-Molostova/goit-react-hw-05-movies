@@ -43,7 +43,6 @@ const MovieDetails = () => {
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
               alt={movie.title}
-              width="300"
               className="moviePoster"
             />
             <div className="movieDescr">
