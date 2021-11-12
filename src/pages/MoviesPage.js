@@ -45,6 +45,7 @@ const MoviesPage = () => {
             return;
           }
           setMovieForSearch(movieForSearch);
+          setError('');
         })
         .catch(error => console.log(error));
     }
