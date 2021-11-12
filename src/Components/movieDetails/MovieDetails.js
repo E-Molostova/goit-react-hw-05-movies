@@ -24,7 +24,7 @@ const MovieDetails = () => {
       .fetchMovieById(movieId)
       .then(setMovie)
       .catch(error => history.push({ pathname: '/not-found' }));
-  }, [movieId]);
+  }, [history, movieId]);
 
   const releaseYear = new Date(movie?.release_date).getFullYear();
 
@@ -58,7 +58,11 @@ const MovieDetails = () => {
               <p className="genresTitle">
                 Genres:{' '}
                 {movie.genres &&
-                  movie.genres.map(genre => <span className="movieGenres">{genre.name}</span>)}{' '}
+                  movie.genres.map(genre => (
+                    <span key={genre.id} className="movieGenres">
+                      {genre.name}
+                    </span>
+                  ))}{' '}
               </p>
             </div>
           </MovieDetailsContainer>
@@ -67,6 +71,7 @@ const MovieDetails = () => {
 
             {additionalRoutes.map(route => (
               <NavLink
+                key={route.name}
                 className="addLink"
                 exact={route.exact}
                 to={{

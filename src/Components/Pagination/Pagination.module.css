@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin: 10px auto;
+}
+
+.btn:first-child {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.btn:last-child {
+  margin-right: auto;
+}
+
+.btn {
+  margin-left: 20px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e4e4;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: white;
+  background-color: grey;
+}
+
+.page {
+  margin: 5px;
+  font-weight: 700;
+  color: rgb(33, 83, 177);
+}
