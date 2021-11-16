@@ -15,7 +15,8 @@ export const MovieListContainer = styled.ul`
 
   .movieItem {
     max-width: 300px;
-    margin-left: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 30px;
     flex-basis: calc((100%) - 60px);
   }
