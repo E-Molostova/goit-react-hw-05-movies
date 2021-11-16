@@ -75,7 +75,7 @@ const MoviesPage = () => {
         </>
       )}
 
-      {movieForSearch.length > 0 && <Pagination />}
+      {!!movieForSearch.length > 0 && <Pagination />}
     </>
   );
 };

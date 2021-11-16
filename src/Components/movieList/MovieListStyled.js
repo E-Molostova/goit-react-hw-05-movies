@@ -4,6 +4,10 @@ export const MovieListContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 
   .movieListTitle {
     margin-top: 0;
@@ -13,7 +17,7 @@ export const MovieListContainer = styled.ul`
     max-width: 300px;
     margin-left: 30px;
     margin-bottom: 30px;
-    flex-basis: calc((100%) - 30px);
+    flex-basis: calc((100%) - 60px);
   }
 
   .movieImg {

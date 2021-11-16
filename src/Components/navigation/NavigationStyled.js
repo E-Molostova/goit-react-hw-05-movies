@@ -4,11 +4,14 @@ export const NavigationContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
   .navigationList {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding: 0;
   }
   .navigationListItem:not(:last-child) {
     margin-right: 20px;
