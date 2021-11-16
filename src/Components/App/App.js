@@ -11,7 +11,7 @@ const App = () => {
     <>
       <Container>
         <Header />
-        <main>
+        <main >
           <Suspense fallback={<h2>Loading...</h2>}>
             <Switch>
               <Route path="/movie/:movieId">{MovieDetailsPage}</Route>

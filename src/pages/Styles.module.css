@@ -10,10 +10,11 @@
 .divForm {
   display: flex;
   justify-content: center;
+  /* height: 80vh; */
+  /* height: calc(100vh-120px); */
 }
 
 .form {
-  /* margin: 20px 10px 20px 70px; */
   padding: 10px;
   min-height: 50px;
   border-radius: 10px;
@@ -38,5 +39,5 @@
 }
 
 .error {
-  margin-left: 70px;
+  text-align: center;
 }

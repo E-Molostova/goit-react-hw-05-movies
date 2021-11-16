@@ -4,14 +4,7 @@
 
   padding: 20px 40px;
   text-align: center;
-
-  position: fixed;
-  left: 0;
-  bottom: 0;
+ 
+  
   width: 100%;
-
-  @media screen and (max-width: 767px) {
-    padding: 10px;
-    height: 80px;
-  }
 }

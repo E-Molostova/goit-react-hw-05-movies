@@ -30,15 +30,19 @@ const Pagination = () => {
   };
 
   return (
-    <div className={s.container}>
-      <button className={s.btn} type="button" data-active="prev" onClick={handleChangePage}>
-        Prev
-      </button>
-      <p className={s.page}>{`${page}`}</p>
-      <button className={s.btn} type="button" data-active="next" onClick={handleChangePage}>
-        Next
-      </button>
-    </div>
+    <>
+      {page && (
+        <div className={s.container}>
+          <button className={s.btn} type="button" data-active="prev" onClick={handleChangePage}>
+            Prev
+          </button>
+          <p className={s.page}>{`${page}`}</p>
+          <button className={s.btn} type="button" data-active="next" onClick={handleChangePage}>
+            Next
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -39,6 +39,8 @@ export const MovieDetailsContainer = styled.div`
 `;
 
 export const AdditionalContainer = styled.div`
+  margin: 10px;
+
   .addTitle {
     margin-left: 20px;
   }
