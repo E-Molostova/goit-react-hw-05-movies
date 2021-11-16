@@ -18,12 +18,12 @@ export const NavigationContainer = styled.nav`
   }
   .navigationListItemLink {
     text-transform: uppercase;
-    color: cornflowerblue;
+    color: black;
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
   }
   .navigationListItemLinkActive {
-    color: red;
+    color: orange;
   }
 `;

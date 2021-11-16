@@ -53,20 +53,21 @@ const MoviesPage = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={s.form}>
-        <input
-          className={s.input}
-          type="text"
-          name="search"
-          value={search}
-          onChange={handleSearchInput}
-          placeholder="Search movies"
-        />
-        <button className={s.btn} type="submit" title="Go">
-          <span>Search</span>
-        </button>
-      </form>
-
+      <div className={s.divForm}>
+        <form onSubmit={handleSubmit} className={s.form}>
+          <input
+            className={s.input}
+            type="text"
+            name="search"
+            value={search}
+            onChange={handleSearchInput}
+            placeholder="Search movies"
+          />
+          <button className={s.btn} type="submit" title="Go">
+            <span>Search</span>
+          </button>
+        </form>
+      </div>
       {error ? (
         <p className={s.error}>{error}</p>
       ) : (
