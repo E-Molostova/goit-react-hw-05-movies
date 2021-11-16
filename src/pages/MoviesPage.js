@@ -53,7 +53,7 @@ const MoviesPage = () => {
 
   return (
     <>
-      <div className={s.divForm}>
+      <div className={q ? s.divForm : s.formFooter}>
         <form onSubmit={handleSubmit} className={s.form}>
           <input
             className={s.input}

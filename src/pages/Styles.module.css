@@ -13,6 +13,11 @@
   /* height: 80vh; */
   /* height: calc(100vh-120px); */
 }
+.formFooter {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
 
 .form {
   padding: 10px;
